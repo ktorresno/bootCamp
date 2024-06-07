@@ -1,5 +1,9 @@
 const Total = (props) => {
-    const total = props.courses.parts[0].exercises + props.courses.parts[1].exercises + props.courses.parts[2].exercises;
+    const initialVal = 0;
+    const total = props.courses.parts.reduce(
+        (acc, currItem) => acc + currItem.exercises, 
+        initialVal
+    );
     return <p>{props.courses.totalMessage} {total}</p>
 }
 

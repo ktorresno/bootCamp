@@ -1,6 +1,6 @@
 const Total = (props) => {
-    const total = props.exercises1 + props.exercises2 + props.exercises3;
-    return <p>{props.msg} {total}</p>
+    const total = props.courses.parts[0].exercises + props.courses.parts[1].exercises + props.courses.parts[2].exercises;
+    return <p>{props.courses.totalMessage} {total}</p>
 }
 
 export default Total;
